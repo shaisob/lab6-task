@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gender</title>
+</head>
+<body>
+	<form>
+		
+			<legend>Gender</legend>
+
+			<input id="male" type="radio" name="gender" value="male" >Male 
+			<input id="female" type="radio" name="gender" value="female" >Female 
+			<input id="other" type="radio" name="gender" value="other" >Other 
+
+			</br>
+
+		<input type="button" name="btn" value="Submit" onclick="f1()"></br>
+		
+		<p id="msg"></p>
+	</form>
+
+	<script>
+
+		function f1(){
+			"use strict";
+
+			var gender = "null"
+
+			if(document.getElementById('male').checked)
+			
+			{
+
+				gender = document.getElementById('male').value;
+				window.alert("Ok");
+				document.getElementById('msg').innerHTML = gender;
+
+			}
+			else if(document.getElementById('female').checked)
+
+			{
+
+				gender = document.getElementById('female').value;
+				window.alert("Ok");
+				document.getElementById('msg').innerHTML = gender;
+
+			}
+			else if(document.getElementById('other').checked)
+
+			{
+
+				gender = document.getElementById('other').value;
+				window.alert("Ok");
+				document.getElementById('msg').innerHTML = gender;
+
+			}
+			else
+			{
+				window.alert("Please select your gender");
+				document.getElementById('msg').innerHTML = gender;
+			}	
+		}
+
+	</script>
+</body>
+</html>

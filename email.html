@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email</title>
+</head>
+<body>
+	<form>
+
+		Email</br>
+		<input id="email" type="email" name="email" value="" ></br>
+		<input type="button" name="btn" value="Submit" onclick="f1()"></br>
+
+		<p id="msg"></p>
+	</form>
+
+	<script>
+
+		function f1(){
+			"use strict";
+
+			var email = document.getElementById('email').value;
+			var valid = false;
+
+			if(email.includes('@'))
+
+			{                             
+				if(email.includes('.') && email.includes('.com') )
+				{    
+					valid = true;
+				}
+			}
+			
+
+			if(email == "" || email == null)
+			{
+				alert("empty email address");
+				document.getElementById('msg').innerHTML = "empty email address";
+			}
+			
+			else if(!valid)
+			{
+				alert("not valid");
+				document.getElementById('msg').innerHTML = "not valid";
+			}
+
+			else
+			{
+				document.getElementById('msg').innerHTML = "valid";
+			}
+
+			
+
+		}
+	</script>
+</body>
+</html>

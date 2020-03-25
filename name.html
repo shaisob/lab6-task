@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Name</title>
+</head>
+<body>
+	<form>
+		Name</br>
+		<input id="name" type="text" name="name" value="" ></br>
+		<input type="button" name="btn" value="Submit" onclick="f1()"></br>
+
+		<p id="msg"></p>
+	</form>
+
+	<script>
+
+		function f1(){
+			"use strict"
+
+			var name = document.getElementById('name').value;
+  			var words = name.split(' ');
+  			var count = words.length;
+  			
+
+			if(name == "" || name == null)
+			{
+				window.alert("null");
+				document.getElementById('msg').innerHTML = "Null submission";
+
+            }
+
+
+            else if(count<2)
+
+            {
+				window.alert("at least 2 words needed.");
+				document.getElementById('msg').innerHTML = "at least 2 words needed.";
+            }
+
+
+
+			else
+
+		    {
+				window.alert("Ok")
+				document.getElementById('msg').innerHTML = "Ok";
+			}
+
+		}
+	</script>
+</body>
+</html> 
